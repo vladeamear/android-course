@@ -63,6 +63,5 @@
 + [Шрифты в XML](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html)
 + [Загружаемые шрифты](https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts.html)
 + [Поддержка разных экранов](https://developer.android.com/guide/practices/screens_support.html)
-+ [Zeplin](https://habrahabr.ru/company/uteam/blog/315542/)
 
 
