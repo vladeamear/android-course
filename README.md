@@ -40,7 +40,7 @@
 ## Теоретическая информация
 ### Верстка
 **Начало разработки под Android**
-+ [С чего начать](https://developer.android.com/training/index.html)
++ [Гайды](https://developer.android.com/training/index.html)
 
 **Верстка**
 + [Создание макетов в XML](https://developer.android.com/guide/topics/ui/declaring-layout.html)
