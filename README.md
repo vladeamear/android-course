@@ -36,3 +36,12 @@
 - Возможность просмотра 3D-модели со всех сторон.  
 **`Стек: Полная свобода. Единственное требование - Kotlin`**
 
+Этот файл будет дополняться ссылками на ресурсы с информацией
+##Теоретическая информация
+###Верстка
+Описание layouts: https://developer.android.com/develop/ui/views/layout/declaring-layout
+Frame Layout: https://developer.alexanderklimov.ru/android/layout/framelayout.php
+Linear Layout: https://developer.alexanderklimov.ru/android/layout/linearlayout.php
+Relative Layout: https://developer.alexanderklimov.ru/android/layout/relativelayout.php
+
+
