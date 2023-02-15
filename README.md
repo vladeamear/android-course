@@ -39,9 +39,36 @@
 Этот файл будет дополняться ссылками на ресурсы с информацией
 ## Теоретическая информация
 ### Верстка
-Описание layouts: https://developer.android.com/develop/ui/views/layout/declaring-layout  
-Frame Layout: https://developer.alexanderklimov.ru/android/layout/framelayout.php  
-Linear Layout: https://developer.alexanderklimov.ru/android/layout/linearlayout.php  
-Relative Layout: https://developer.alexanderklimov.ru/android/layout/relativelayout.php  
+**1. Начало разработки под Android**
++ [Начало разаработки](https://developer.android.com/training/index.html) **(\*\*\*\*)**
+
+**2. Верстка**
++ [Создание макетов в XML и View groups](https://developer.android.com/guide/topics/ui/declaring-layout.html) **(\*\*\*)**
+
+**3. Типы layout'ов**
++ [Frame Layout](http://developer.alexanderklimov.ru/android/layout/framelayout.php) **(\*\*\)**
++ [Linear Layout](https://developer.alexanderklimov.ru/android/layout/linearlayout.php) **(\*\*\)**
++ [Relative Layout](https://developer.alexanderklimov.ru/android/layout/relativelayout.php) **(\*\*\)**
+
+**4. Табы**
++ [Обзор](https://developer.android.com/training/implementing-navigation/lateral.html) **(\*\*\*)**
+
+**5. BottomNavigationView**
++ [Обзор](https://developer.android.com/reference/android/support/design/widget/BottomNavigationView.html) **(\*\*\*)**
+
+**6. Constraint Layout**
++ [Документация](https://developer.android.com/reference/android/support/constraint/ConstraintLayout.html) **(\*\*\*\*)**
++ [Работа с различными свойствами](https://habrahabr.ru/company/touchinstinct/blog/326814/) **(\*\*\*\*)**
+
+**7. Списки**
++ [ListView](http://developer.alexanderklimov.ru/android/views/listview.php) **(\*\*\)**
++ [RecyclerView и Adapter](https://developer.android.com/training/material/lists-cards.html) **(\*\*\)**
++ [DiffUtils](https://medium.com/@iammert/using-diffutil-in-android-recyclerview-bdca8e4fbb00) **(\*\*\)**
+
+**8. Ресурсы**
++ [Шрифты в XML](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html) **(\*\*\)**
++ [Загружаемые шрифты](https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts.html) **(\*\*\)**
++ [Поддержка разных экранов](https://developer.android.com/guide/practices/screens_support.html) **(\*\*\)**
++ [Zeplin](https://habrahabr.ru/company/uteam/blog/315542/) **(\*\*\)**
 
 
