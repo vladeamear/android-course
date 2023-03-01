@@ -64,7 +64,7 @@
 + [Загружаемые шрифты](https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts.html)
 + [Поддержка разных экранов](https://developer.android.com/guide/practices/screens_support.html)
 
-## V. Android OS. Activity. Fragments
+## Android OS. Activity. Fragments
 **1. Android OS:** 
 + [История Android](https://www.android.com/history/#/marshmallow) **(\*\*)**
 + [Архитектура Android](https://source.android.com/devices/architecture/) **(\*\*)**
@@ -95,5 +95,34 @@
 **6. BroadcastReceiver:**  
 + [BroadcastReceiver - основы](http://codetheory.in/android-broadcast-receivers/) **(\*\*\*\*)**
 + [Изменения работы с BroadcastReceiver с Android 8.0](https://developer.android.com/guide/components/broadcast-exceptions.html) **(\*\*)**
+
+## Структуры данных. Работа с файлами
+**1. Работа с файлами в java. Сериализация:**  
++ [Потоки ввода-вывода](https://metanit.com/java/tutorial/6.1.php)  **(\*\*\*\*)**
++ [Закрытие потоков](https://metanit.com/java/tutorial/6.2.php)  **(\*\*\*\*)**
++ [Чтение и запись файлов. FileInputStream и FileOutputStream](https://metanit.com/java/tutorial/6.3.php)  **(\*\*\*\*)**
++ [Классы ByteArrayInputStream и ByteArrayOutputStream](https://metanit.com/java/tutorial/6.4.php)  **(\*\*)**
++ [Буферизуемые потоки. Классы BufferedInputStream и BufferedOuputStream](https://metanit.com/java/tutorial/6.5.php)  **(\*\*\*\*)**
++ [Чтение и запись текстовых файлов. FileReader и FileWriter](https://metanit.com/java/tutorial/6.8.php)  **(\*\*)**
++ [Буферизируемые символьные потоки. BufferedReader и BufferedWriter](https://metanit.com/java/tutorial/6.9.php)  **(\*\*)**
++ [Сериализация объектов](https://metanit.com/java/tutorial/6.10.php)  **(\*\*)**
++ [Класс File. Работа с файлами и каталогами](https://metanit.com/java/tutorial/6.11.php)  **(\*\*\*\*)**
++ [Работа с ZIP-архивами](https://metanit.com/java/tutorial/6.12.php)  **(\*\*)**
+
+**2. JSON:**
++ [Понятие](https://ru.wikipedia.org/wiki/JSON)  **(\*\*\*\*)**
++ [Парсинг в Android](https://metanit.com/java/android/13.3.php)  **(\*\*\*)**
++ [Gson](https://habrahabr.ru/company/naumen/blog/228279/) **(\*\*\*\*)**
+
+**3. Сохранение данных в файловую систему Android:**  
++ [SharedPreferences](https://developer.android.com/training/basics/data-storage/shared-preferences.html?hl=ru#GetSharedPreferences) **(\*\*\*\*)**
++ [Настройки через Preferences](https://developer.android.com/guide/topics/ui/settings.html?hl=ru) **(\*\*)**
++ [Android data storage](https://developer.android.com/training/basics/data-storage/files.html) **(\*\*\*\*)**
++ [FileProvider](https://developer.android.com/reference/android/support/v4/content/FileProvider.html) **(\*\*\*)**
+
+**3. Работа с датой и временем:**  
++ [Date, Calendar](http://developer.alexanderklimov.ru/android/java/date.php) **(\*\*\*\*)**
++ [Date в Java 8](http://www.baeldung.com/java-8-date-time-intro) **(\*\*\*\*)**
++ [Работа со временем в java ](https://habrahabr.ru/post/274811/) **(\*\*)**
 
 
