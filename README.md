@@ -64,4 +64,36 @@
 + [Загружаемые шрифты](https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts.html)
 + [Поддержка разных экранов](https://developer.android.com/guide/practices/screens_support.html)
 
+## V. Android OS. Activity. Fragments
+**1. Android OS:** 
++ [История Android](https://www.android.com/history/#/marshmallow) **(\*\*)**
++ [Архитектура Android](https://source.android.com/devices/architecture/) **(\*\*)**
+
+**2. Application:**  
++ [Application](https://developer.android.com/reference/android/app/Application.html)  **(\*\*\*)**
++ [Context](https://possiblemobile.com/2013/06/context/)  **(\*\*\*)**
++ [Файл Manifest](https://developer.android.com/guide/topics/manifest/manifest-intro.html) **(\*\*\*\*)**
+
+**3. Activity:**  
++ [Activity - основы](https://developer.android.com/guide/components/activities.html) **(\*\*\*\*)**
++ [Task и Back Stack](https://habrahabr.ru/post/186434/) **(\*\*)**
++ [Передача данных между Activity](https://developer.android.com/guide/components/activities/parcelables-and-bundles.html) **(\*\*\*\*)**
++ [Управление жизненным циклом Activity](https://developer.android.com/training/basics/activity-lifecycle/index.html) **(\*\*\*\*)**
+
+**4. Fragment:**  
++ [Fragment - основы](https://developer.android.com/guide/components/fragments.html) **(\*\*\*\*)**
++ [Диалоговые окна](https://developer.android.com/guide/topics/ui/dialogs.html) **(\*\*\*\*)**
++ [Обработка изменений конфигурации экрана](https://developer.android.com/guide/topics/resources/runtime-changes.html?hl=ru) **(\*\*\*\*)**
++ [Target fragment](https://habrahabr.ru/post/259805/) **(\*\*)**
+
+
+**5. Работа со сторонними приложениями и permissions:**  
++ [Run-time permissions](https://developer.android.com/training/permissions/requesting.html)**(\*\*\*\*)**
++ [Intent и фильтры](https://developer.android.com/guide/components/intents-filters.html?hl=ru)**(\*\*\*\*)**
++ [Взаимодействие с другими приложениями](https://developer.android.com/training/basics/intents/index.html )**(\*\*\*)**
+
+**6. BroadcastReceiver:**  
++ [BroadcastReceiver - основы](http://codetheory.in/android-broadcast-receivers/) **(\*\*\*\*)**
++ [Изменения работы с BroadcastReceiver с Android 8.0](https://developer.android.com/guide/components/broadcast-exceptions.html) **(\*\*)**
+
 
