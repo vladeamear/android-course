@@ -2,17 +2,19 @@ package com.example.weatherapp
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.location.Address
+import android.location.Geocoder
 import android.os.AsyncTask
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import org.json.JSONObject
 import java.net.URL
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     var LAT: String = "59.8944"
@@ -21,6 +23,12 @@ class MainActivity : AppCompatActivity() {
     val API_ID: String = "16d5ab1b9cb848d337b649f4952d2896"
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
 
+    private fun getAddress(lat: Double, lng: Double): String? {
+        val geocoder = Geocoder(this)
+        val list = geocoder.getFromLocation(lat, lng, 1)
+        return list?.get(0)?.getAddressLine(0)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -28,10 +36,8 @@ class MainActivity : AppCompatActivity() {
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
         findViewById<Button>(R.id.btn_get_loc).setOnClickListener {
             fetchLocation()
-            weatherTask().execute()
         }
-
-        weatherTask().execute()
+        fetchLocation()
     }
 
     private fun fetchLocation() {
@@ -48,9 +54,11 @@ class MainActivity : AppCompatActivity() {
 
         task.addOnSuccessListener {
             if (it != null) {
+                val address = getAddress(it.latitude, it.longitude)
                 LON = it.longitude.toString()
                 LAT = it.latitude.toString()
-                Toast.makeText(applicationContext, "lon:${it.longitude} lat:${it.latitude}", Toast.LENGTH_SHORT).show()
+                findViewById<TextView>(R.id.text_location).text = address
+                weatherTask().execute()
             }
         }
     }
@@ -75,9 +83,9 @@ class MainActivity : AppCompatActivity() {
             super.onPostExecute(result)
             try {
                 val jsonObj = JSONObject(result)
-                findViewById<TextView>(R.id.text_view).text = jsonObj.toString()
+//                findViewById<TextView>(R.id.text_view).text = jsonObj.toString()
             } catch (e: Exception) {
-                findViewById<TextView>(R.id.text_view).text = "Error"
+//                findViewById<TextView>(R.id.text_view).text = "Error"
             }
         }
     }
