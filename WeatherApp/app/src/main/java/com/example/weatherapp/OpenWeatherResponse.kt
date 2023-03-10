@@ -5,7 +5,8 @@ data class OpenWeatherCoords(val lon: Double, val lat: Double)
 data class OpenWeatherWeather(
     val id: Int,
     val main: String,
-    val description: String, val icon: String
+    val description: String,
+    val icon: String
 )
 data class OpenWeatherMain(
     val temp: Double,

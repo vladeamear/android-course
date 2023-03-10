@@ -5,15 +5,13 @@ import android.content.pm.PackageManager
 import android.location.Geocoder
 import android.os.AsyncTask
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.gson.Gson
-import com.google.gson.JsonElement
-import org.json.JSONObject
 import java.net.URL
 
 class MainActivity : AppCompatActivity() {
@@ -35,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
-        findViewById<Button>(R.id.btn_get_loc).setOnClickListener {
+        findViewById<FloatingActionButton>(R.id.update_info).setOnClickListener {
             fetchLocation()
         }
         fetchLocation()
@@ -58,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                 val city = getCity(it.latitude, it.longitude)
                 LON = it.longitude.toString()
                 LAT = it.latitude.toString()
-                findViewById<TextView>(R.id.city_output).text = "Город: $city"
+                findViewById<TextView>(R.id.city_title).text = city
                 weatherTask().execute()
             }
         }
@@ -77,7 +75,6 @@ class MainActivity : AppCompatActivity() {
             } catch (e: Exception) {
                 response = null
             }
-//            return gson.toJson(response)
             return response.toString()
         }
 
@@ -85,10 +82,18 @@ class MainActivity : AppCompatActivity() {
             super.onPostExecute(result)
             val resObj: OpenWeatherResponse = gson.fromJson(result, OpenWeatherResponse::class.java)
             try {
-                findViewById<TextView>(R.id.current_weather_output).text = resObj.coord.lat.toString()
-//                findViewById<TextView>(R.id.current_weather_output).text = result.toString().trimIndent()
+                findViewById<TextView>(R.id.current_degree).text =
+                    "${Math.round(resObj.main.temp)}°"
+                findViewById<TextView>(R.id.current_feel_degree).text =
+                    "${Math.round(resObj.main.feels_like)}°"
+                findViewById<TextView>(R.id.weather_description).text =
+                    resObj.weather.get(0).description.capitalize()
+                findViewById<TextView>(R.id.humidity).text =
+                    "${resObj.main.humidity}%"
+                findViewById<TextView>(R.id.wind_speed).text =
+                    "${resObj.wind.speed} м/с"
             } catch (e: Exception) {
-                findViewById<TextView>(R.id.current_weather_output).text = "Error"
+                findViewById<TextView>(R.id.current_degree).text = "Error"
             }
         }
     }
