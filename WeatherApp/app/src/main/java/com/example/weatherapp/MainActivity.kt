@@ -2,9 +2,13 @@ package com.example.weatherapp
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.GradientDrawable
 import android.location.Geocoder
 import android.os.AsyncTask
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -13,6 +17,11 @@ import com.google.android.gms.location.LocationServices
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.gson.Gson
 import java.net.URL
+
+val timeGradient: Array<IntArray> = arrayOf(
+    intArrayOf(0xFFFFFF99.toInt(), 0xFFFFFFCC.toInt()),
+    intArrayOf(0x00000c, 0x00000c)
+)
 
 class MainActivity : AppCompatActivity() {
     var LAT: String = "59.8944"
@@ -25,13 +34,12 @@ class MainActivity : AppCompatActivity() {
     private fun getCity(lat: Double, lng: Double): String? {
         val geocoder = Geocoder(this)
         val list = geocoder.getFromLocation(lat, lng, 1)
-        return list?.get(0)?.getLocality()
+        return list?.get(0)?.locality
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
         findViewById<FloatingActionButton>(R.id.update_info).setOnClickListener {
             fetchLocation()
@@ -87,11 +95,17 @@ class MainActivity : AppCompatActivity() {
                 findViewById<TextView>(R.id.current_feel_degree).text =
                     "${Math.round(resObj.main.feels_like)}°"
                 findViewById<TextView>(R.id.weather_description).text =
-                    resObj.weather.get(0).description.capitalize()
+                    resObj.weather[0].description.capitalize()
                 findViewById<TextView>(R.id.humidity).text =
                     "${resObj.main.humidity}%"
                 findViewById<TextView>(R.id.wind_speed).text =
                     "${resObj.wind.speed} м/с"
+                val resourceId =
+                    resources.getIdentifier("ic_${resObj.weather[0].icon}", "drawable", packageName)
+                findViewById<ImageView>(R.id.imageView).setImageResource(resourceId)
+                findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.wrapper).background =
+//                    ColorDrawable(Color.BLACK)
+                    GradientDrawable(GradientDrawable.Orientation.BL_TR, timeGradient[0])
             } catch (e: Exception) {
                 findViewById<TextView>(R.id.current_degree).text = "Error"
             }
