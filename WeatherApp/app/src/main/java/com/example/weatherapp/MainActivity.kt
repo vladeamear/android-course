@@ -17,10 +17,34 @@ import com.google.android.gms.location.LocationServices
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.gson.Gson
 import java.net.URL
+import java.text.SimpleDateFormat
+import java.util.Calendar
 
 val timeGradient: Array<IntArray> = arrayOf(
-    intArrayOf(0xFFFFFF99.toInt(), 0xFFFFFFCC.toInt()),
-    intArrayOf(0x00000c, 0x00000c)
+    intArrayOf(0xFF00000Cu.toInt(), 0xFF00000Cu.toInt()),
+    intArrayOf(0xFF020111u.toInt(), 0xFF191621u.toInt()),
+    intArrayOf(0xFF020111u.toInt(), 0xFF20202cu.toInt()),
+    intArrayOf(0xFF020111u.toInt(), 0xFF3a3a52u.toInt()),
+    intArrayOf(0xFF20202cu.toInt(), 0xFF515175u.toInt()),
+    intArrayOf(0xFF40405cu.toInt(), 0xFF6f71aau.toInt(), 0xFF8a76abu.toInt()),
+    intArrayOf(0xFF4a4969u.toInt(), 0xFF7072abu.toInt(), 0xFFcd82a0u.toInt()),
+    intArrayOf(0xFF757abfu.toInt(), 0xFF8583beu.toInt(), 0xFFeab0d1u.toInt()),
+    intArrayOf(0xFF82addbu.toInt(), 0xFFebb2b1u.toInt()),
+    intArrayOf(0xFF94c5f8u.toInt(), 0xFFa6e6ffu.toInt(), 0xFFb1b5eau.toInt()),
+    intArrayOf(0xFFb7eaffu.toInt(), 0xFF94dfffu.toInt()),
+    intArrayOf(0xFF9be2feu.toInt(), 0xFF67d1fbu.toInt()),
+    intArrayOf(0xFF90dffeu.toInt(), 0xFF38a3d1u.toInt()),
+    intArrayOf(0xFF57c1ebu.toInt(), 0xFF246fa8u.toInt()),
+    intArrayOf(0xFF2d91c2u.toInt(), 0xFF1e528eu.toInt()),
+    intArrayOf(0xFF2473abu.toInt(), 0xFF1e528eu.toInt(), 0xFF5b7983u.toInt()),
+    intArrayOf(0xFF1e528eu.toInt(), 0xFF265889u.toInt(), 0xFF9da671u.toInt()),
+    intArrayOf(0xFF1e528eu.toInt(), 0xFF728a7cu.toInt(), 0xFFe9ce5du.toInt()),
+    intArrayOf(0xFF154277u.toInt(), 0xFF576e71u.toInt(), 0xFFe1c45eu.toInt(), 0xFFb26339u.toInt()),
+    intArrayOf(0xFF163C52u.toInt(), 0xFF4F4F47u.toInt(), 0xFFC5752Du.toInt(), 0xFFB7490Fu.toInt(), 0xFF2F1107u.toInt()),
+    intArrayOf(0xFF071B26u.toInt(), 0xFF071B26u.toInt(), 0xFF8A3B12u.toInt(), 0xFF240E03u.toInt()),
+    intArrayOf(0xFF010A10u.toInt(), 0xFF59230Bu.toInt(), 0xFF2F1107u.toInt()),
+    intArrayOf(0xFF090401u.toInt(), 0xFF4B1D06u.toInt()),
+    intArrayOf(0xFF00000cu.toInt(), 0xFF150800u.toInt()),
 )
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +52,7 @@ class MainActivity : AppCompatActivity() {
     var LON: String = "30.2642"
 //    Ширина и долгота Санкт Петербурга
     val API_ID: String = "16d5ab1b9cb848d337b649f4952d2896"
+    val currentHour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     val gson = Gson();
 
@@ -104,8 +129,7 @@ class MainActivity : AppCompatActivity() {
                     resources.getIdentifier("ic_${resObj.weather[0].icon}", "drawable", packageName)
                 findViewById<ImageView>(R.id.imageView).setImageResource(resourceId)
                 findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.wrapper).background =
-//                    ColorDrawable(Color.BLACK)
-                    GradientDrawable(GradientDrawable.Orientation.BL_TR, timeGradient[0])
+                    GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM, timeGradient[currentHour])
             } catch (e: Exception) {
                 findViewById<TextView>(R.id.current_degree).text = "Error"
             }
