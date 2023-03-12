@@ -1,11 +1,8 @@
 package com.example.weatherapp
 
 import android.Manifest
-import android.app.Activity
 import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.GradientDrawable
 import android.location.Geocoder
 import android.os.AsyncTask
@@ -19,7 +16,6 @@ import com.google.android.gms.location.LocationServices
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.gson.Gson
 import java.net.URL
-import java.text.SimpleDateFormat
 import java.util.Calendar
 
 val timeGradient: Array<IntArray> = arrayOf(
