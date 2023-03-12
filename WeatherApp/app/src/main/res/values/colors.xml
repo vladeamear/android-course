@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="pearl_aqua">#93CFC3</color>
-    <color name="beige">#F5EFDC</color>
+    <color name="yellow">#EFD052</color>
+    <color name="dark_red">#AD420A</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
