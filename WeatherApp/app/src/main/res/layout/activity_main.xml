@@ -37,7 +37,7 @@
         android:shadowColor="?attr/colorOnPrimary"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:shadowRadius="2"
+        android:shadowRadius="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -55,7 +55,7 @@
         android:shadowColor="?attr/colorOnPrimary"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:shadowRadius="2"
+        android:shadowRadius="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_static_1" />
@@ -73,7 +73,7 @@
         android:shadowColor="?attr/colorOnPrimary"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:shadowRadius="2"
+        android:shadowRadius="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -91,7 +91,7 @@
         android:shadowColor="?attr/colorOnPrimary"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:shadowRadius="2"
+        android:shadowRadius="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/current_degree" />
@@ -109,7 +109,7 @@
         android:shadowColor="?attr/colorOnPrimary"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:shadowRadius="2"
+        android:shadowRadius="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -130,7 +130,7 @@
         android:shadowColor="?attr/colorOnPrimary"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:shadowRadius="2"
+        android:shadowRadius="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/current_feel_degree" />
@@ -159,7 +159,7 @@
                 android:shadowColor="?attr/colorOnPrimary"
                 android:shadowDx="1"
                 android:shadowDy="1"
-                android:shadowRadius="2"
+                android:shadowRadius="10"
                 android:textColor="?attr/colorOnSecondary" />
 
             <TextView
@@ -172,7 +172,7 @@
                 android:shadowColor="?attr/colorOnPrimary"
                 android:shadowDx="1"
                 android:shadowDy="1"
-                android:shadowRadius="2"
+                android:shadowRadius="10"
                 android:textColor="?attr/colorOnSecondary" />
         </TableRow>
 
@@ -190,7 +190,7 @@
                 android:shadowColor="?attr/colorOnPrimary"
                 android:shadowDx="1"
                 android:shadowDy="1"
-                android:shadowRadius="2"
+                android:shadowRadius="10"
                 android:textColor="?attr/colorOnSecondary" />
 
             <TextView
@@ -203,7 +203,7 @@
                 android:shadowColor="?attr/colorOnPrimary"
                 android:shadowDx="1"
                 android:shadowDy="1"
-                android:shadowRadius="2"
+                android:shadowRadius="10"
                 android:textColor="?attr/colorOnSecondary" />
         </TableRow>
 

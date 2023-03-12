@@ -1,6 +1,8 @@
 package com.example.weatherapp
 
 import android.Manifest
+import android.app.Activity
+import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -65,6 +67,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
         findViewById<FloatingActionButton>(R.id.update_info).setOnClickListener {
             fetchLocation()
